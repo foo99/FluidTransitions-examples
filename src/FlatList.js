@@ -9,7 +9,7 @@ import {
   Dimensions,
 } from 'react-native';
 
-import { Transition, FluidNavigator } from '../lib';
+import { Transition, FluidNavigator } from 'react-navigation-fluid-transitions';
 
 class ListScreen extends React.Component {
   constructor(props) {

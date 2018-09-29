@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Image, Dimensions, Text, TouchableWithoutFeedback, StyleSheet } from 'react-native';
-import { Transition, FluidNavigator } from '../lib';
+import { Transition, FluidNavigator } from 'react-navigation-fluid-transitions';
 
 const styles = StyleSheet.create({
   container: {
@@ -133,7 +133,7 @@ const Screen1 = (props) => (
           <View style={styles.paper1} />
         </Transition>
         <Transition appear="right" shared="image">
-          <Image style={styles.shoe1} source={require('./assets/air-jordan-1.png')} />
+          <Image style={styles.shoe1} source={require('../assets/air-jordan-1.png')} />
         </Transition>
         <Transition appear="horizontal">
           <View style={styles.headerContainer1}>
@@ -154,7 +154,7 @@ const Screen2 = (props) => (
           <View style={styles.paper2} />
         </Transition>
         <Transition shared="image">
-          <Image style={styles.shoe2} source={require('./assets/air-jordan-1.png')} />
+          <Image style={styles.shoe2} source={require('../assets/air-jordan-1.png')} />
         </Transition>
         <Transition appear="horizontal" delay>
           <Text style={styles.price}>$ 299</Text>
@@ -162,12 +162,12 @@ const Screen2 = (props) => (
         <View style={styles.smallImageContainer}>
           <Transition appear="horizontal" delay>
             <View style={styles.smallImageWrapper}>
-              <Image style={styles.smallImage} source={require('./assets/air-jordan-1.png')} />
+              <Image style={styles.smallImage} source={require('../assets/air-jordan-1.png')} />
             </View>
           </Transition>
           <Transition appear="horizontal" delay>
             <View style={styles.smallImageWrapper}>
-              <Image style={styles.smallImage} source={require('./assets/air-jordan-1.png')} />
+              <Image style={styles.smallImage} source={require('../assets/air-jordan-1.png')} />
             </View>
           </Transition>
         </View>

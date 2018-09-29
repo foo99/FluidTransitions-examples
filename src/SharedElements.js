@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
-import { Transition, createFluidNavigator } from '../lib';
+import { Transition, createFluidNavigator } from 'react-navigation-fluid-transitions';
 
 const styles = StyleSheet.create({
   container: {

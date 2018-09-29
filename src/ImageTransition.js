@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, Dimensions, Button, TouchableOpacity, FlatList, Image, StyleSheet } from 'react-native';
 import chunk from 'lodash.chunk';
-import { FluidNavigator, Transition } from '../lib';
+import { FluidNavigator, Transition } from 'react-navigation-fluid-transitions';
 
 const styles = StyleSheet.create({
   container: {
