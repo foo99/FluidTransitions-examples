@@ -1,6 +1,8 @@
 import React from 'react';
-import { View, Image, Dimensions, Text, TouchableWithoutFeedback, StyleSheet } from 'react-native';
+import { View, Image, Dimensions, Platform, Text, TouchableWithoutFeedback, StyleSheet } from 'react-native';
 import { Transition, FluidNavigator } from 'react-navigation-fluid-transitions';
+
+const FONT_FAMILY = Platform.select({ ios: 'Futura', android: 'monospace' });
 
 const styles = StyleSheet.create({
   container: {
@@ -42,12 +44,12 @@ const styles = StyleSheet.create({
     color: '#FFF',
     fontSize: 80,
     marginBottom: -14,
-    fontFamily: 'Bebas Neue',
+    fontFamily: FONT_FAMILY,
   },
   subHeader1: {
     color: '#FFF',
     fontSize: 34,
-    fontFamily: 'Bebas Neue',
+    fontFamily: FONT_FAMILY,
   },
   top2: {
     backgroundColor: '#C14534',
@@ -75,7 +77,7 @@ const styles = StyleSheet.create({
   price: {
     color: '#FFF',
     fontSize: 34,
-    fontFamily: 'Bebas Neue',
+    fontFamily: FONT_FAMILY,
     textAlign: 'center',
     paddingTop: -55 + Dimensions.get('window').height * 0.5,
   },
@@ -88,14 +90,14 @@ const styles = StyleSheet.create({
     color: '#444',
     fontSize: 42,
     textAlign: 'center',
-    fontFamily: 'Bebas Neue',
+    fontFamily: FONT_FAMILY,
     marginBottom: -6,
   },
   subHeader2: {
     color: '#444',
     fontSize: 22,
     textAlign: 'center',
-    fontFamily: 'Bebas Neue',
+    fontFamily: FONT_FAMILY,
   },
   smallImageContainer: {
     position: 'absolute',
