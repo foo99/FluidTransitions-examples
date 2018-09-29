@@ -1,21 +1,32 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { createStackNavigator } from 'react-navigation';
+
+import HomeScreen from './src/HomeScreen';
+import SharedElements from './src/SharedElements';
+import AppearingElements from './src/AppearingElements';
+import ImageTransition from './src/ImageTransition';
+import LayoutTransition from './src/LayoutTransition';
+import Onboarding from './src/Onboarding';
+import ShoeShop from './src/ShoeShop';
+import FlatList from './src/FlatList';
+import AnimatedProperty from './src/AnimatedProperty';
+
+const ExampleNavigator = createStackNavigator({
+  home: { screen: HomeScreen, navigationOptions: { title: 'Fluid Transitions' } },
+  shared: { screen: SharedElements },
+  appear: { screen: AppearingElements },
+  image: { screen: ImageTransition },
+  layout: { screen: LayoutTransition },
+  onboarding: { screen: Onboarding },
+  shoes: { screen: ShoeShop },
+  flatlist: { screen: FlatList },
+  animatedProperty: { screen: AnimatedProperty },
+});
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
+      <ExampleNavigator />
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
